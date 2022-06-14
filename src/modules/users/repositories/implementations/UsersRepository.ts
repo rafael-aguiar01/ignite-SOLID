@@ -29,6 +29,7 @@ class UsersRepository implements IUsersRepository {
         });
 
         this.users.push(user);
+        return user;
     }
 
     findById(id: string): User | undefined {
@@ -42,7 +43,7 @@ class UsersRepository implements IUsersRepository {
     }
 
     turnAdmin(receivedUser: User): User {
-        receivedUser.admin = true;
+        // receivedUser.admin = true;
         return receivedUser;
     }
 
